@@ -1,0 +1,206 @@
+<div class="app-card"></div>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5 APPS.SHOP</title>
+    <style>
+        :root {
+            --primary-color: #22c55e;
+            --background: #121212;
+            --card-bg: #1E1E1E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--background);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header {
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 25px;
+            border: 2px solid var(--primary-color);
+            background: var(--card-bg);
+            color: white;
+            font-size: 16px;
+        }
+
+        .app-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .app-card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .app-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        .app-card h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .app-card p {
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .install-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .install-btn:hover {
+            background-color: #1ea350;
+        }
+
+        @media (max-width: 768px) {
+            .app-container {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            input {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>5 APPS.SHOP</h1>
+        <div class="search-box">
+            <input type="text" placeholder="Search for games and apps..."/>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <!-- Original games with updated images -->
+        <div class="app-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" alt="GTA 5"/>
+            <h3>GTA 5 mod+</h3>
+            <p>Platforms: 🖥📱</p>
+            <a href="#" class="install-btn">Install Now</a>
+        </div>
+
+        <!-- Additional games -->
+        <div class="app-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLVlJQ3hp62LtACC8IuR6NUrOXdk6jf8I61YUVsw4wny5pdfYa3mY7Y77qTiRZNiFo50s&usqp=CAU" alt="Minecraft"/>
+            <h3>MINECRAFT mod+</h3>
+            <p>Platforms: 🖥📱</p>
+            <a href="#" class="install-btn">Install Now</a>
+        </div>
+
+        <div class="app-card">
+            <img src="data:image/png;base64,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" alt="Elden Ring"/>
+            <h3>Roblox mod+</h3>
+            <p>Platforms: 🖥</p>
+            <a href="#" class="install-btn">Install Now</a>
+        </div>
+
+        <div class="app-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaqm57-NOiEckY7MuJ0a88ilEDainHJYODXw&s" alt="Elden Ring"/>
+            <h3>BaseBall 9 mod+</h3>
+            <p>Platforms: 🖥</p>
+            <a href="#" class="install-btn">Install Now</a>
+        </div>
+
+        <div class="app-card">
+            <img src="data:image/jpeg;base64,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" alt="Cyberpunk 2077"/>
+            <h3>MOnopoly Go mod+</h3>
+            <p>Platforms: 🖥</p>
+            <a href="#" class="install-btn">Install Now</a>
+        </div>
+
+        <div class="app-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Logo_of_Call_of_Duty_Modern_Warfare_II.jpg" alt="COD: Modern Warfare"/>
+            <h3>Call of Duty: MW2 mod+</h3>
+            <p>Platforms: 🖥📱</p>
+            <a href="#" class="install-btn">Install Now</a>
+        </div>
+
+        <div class="app-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg" alt="The Witcher 3"/>
+            <h3>The Witcher 3 mod+</h3>
+            <p>Platforms: 🖥</p>
+            <a href="#" class="install-btn">Install Now</a>
+        </div>
+
+        <div class="app-card">
+            <img src="https://cdn2.steamgriddb.com/icon_thumb/2b93226186a26399f98c5370a523b91b.png" alt="God of War"/>
+            <h3>God of War: Ragnarök mod+</h3>
+            <p>Platforms: 🖥</p>
+            <a href="#" class="install-btn">Install Now</a>
+        </div>
+
+        
+
+        <div class="app-card">
+            <img src="data:image/png;base64,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" alt="Cyberpunk 2077"/>
+            <h3>Cyberpunk 2077 mod+</h3>
+            <p>Platforms: 🖥</p>
+            <a href="#" class="install-btn">Install Now</a>
+        </div>
+        
+    </div>
+</body>
+</html>
